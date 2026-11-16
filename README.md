@@ -2,7 +2,7 @@
 
 Analysis code and derived result tables for a Sentinel-1/Sentinel-2 annual time-series study (dry seasons 2017-2025) with rainfall context, built around a matched comparison of three social forestry permit areas in southern Malang, Indonesia (Harapan Pertiwi, Bhakti Alam Lestari, Bangkit Sejahtera), against nearby non-KHDPK, non-PS forest estate (HP/HL/HPT within 15 km). Dry-season (Jun-Oct) composites for 2018 and 2025, an annual series 2017-2025, and NASA POWER rainfall.
 
-Author: Arieh Mountara, Balai Perhutanan Sosial Yogyakarta, Ministry of Forestry, Republic of Indonesia. Licence: MIT (see `LICENSE`). Cite via `CITATION.cff`.
+Author: Arieh Mountara, Balai Perhutanan Sosial Yogyakarta, Ministry of Forestry, Republic of Indonesia. Licence: MIT (see `LICENSE`). Archived release v1.0.0: https://doi.org/10.5281/zenodo.24267854. Cite via `CITATION.cff`.
 
 ## Requirements
 Python 3.13 and the pinned packages in `requirements.txt` (`pip install -r requirements.txt`). Internet access is needed for the imagery and weather downloads. No account or API key is required (Planetary Computer signing is handled by the `planetary-computer` package). The full 2017-2025 download is large (multi-GB rasters) and takes hours.
