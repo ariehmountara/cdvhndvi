@@ -1,6 +1,6 @@
 # Code for: Baseline Year and Rainfall Affect Apparent Greening in Community-Managed Social Forestry Areas
 
-Analysis code and derived result tables for a Sentinel-1/Sentinel-2 matched comparison of three social forestry permit areas in southern Malang, Indonesia (Harapan Pertiwi, Bhakti Alam Lestari, Bangkit Sejahtera), against nearby non-KHDPK, non-PS forest estate (HP/HL/HPT within 15 km). Dry-season (Jun-Oct) composites for 2018 and 2025, an annual series 2017-2025, and NASA POWER rainfall.
+Analysis code and derived result tables for a Sentinel-1/Sentinel-2 annual time-series study (dry seasons 2017-2025) with rainfall context, built around a matched comparison of three social forestry permit areas in southern Malang, Indonesia (Harapan Pertiwi, Bhakti Alam Lestari, Bangkit Sejahtera), against nearby non-KHDPK, non-PS forest estate (HP/HL/HPT within 15 km). Dry-season (Jun-Oct) composites for 2018 and 2025, an annual series 2017-2025, and NASA POWER rainfall.
 
 Author: Arieh Mountara, Balai Perhutanan Sosial Yogyakarta, Ministry of Forestry, Republic of Indonesia. Licence: MIT (see `LICENSE`). Cite via `CITATION.cff`.
 
@@ -19,10 +19,12 @@ All paths are set in `scripts/common.py`. Defaults are relative to the repositor
 | Variable | Meaning | Default |
 |---|---|---|
 | `OBIA_ROOT` | project root | parent of `scripts/` |
-| `PS_PARQUET` | permit-boundary GeoParquet; **row index defines the three sites** (`SITES` in `common.py`: rows 299, 298, 303) | `data/ps_definitif_simplified.parquet` |
-| `KWS_PARQUET` | forest-estate function layer (field `F_KWS`; HP/HL/HPT), only for `make_controls.py` | `data/kwshutan_simplified.parquet` |
-| `KHDPK_PARQUET` | KHDPK layer, only for `make_controls.py` | `data/khdpk_simplified.parquet` |
-| `KEC_PARQUET`, `ADMIN_PARQUET` | kecamatan and kabupaten/kota boundaries, only for Fig. 1 | `data/kecamatan_simplified.parquet`, `data/admin_kabkota_simplified.parquet` |
+| `PS_LAYER` | permit-boundary layer, any format geopandas reads (GeoPackage, Shapefile, GeoJSON, GeoParquet); **row index defines the three sites** (`SITES` in `common.py`: rows 299, 298, 303) | `data/ps_definitif.gpkg` |
+| `KWS_LAYER` | forest-estate function layer (field `F_KWS`; HP/HL/HPT), only for `make_controls.py` | `data/kwshutan.gpkg` |
+| `KHDPK_LAYER` | KHDPK layer, only for `make_controls.py` | `data/khdpk.gpkg` |
+| `KEC_LAYER`, `ADMIN_LAYER` | kecamatan and kabupaten/kota boundaries, only for Fig. 1 | `data/kecamatan.gpkg`, `data/admin_kabkota.gpkg` |
+
+The former `*_PARQUET` variable names are still honoured. Adapt `SITES` in `common.py` to the row indices (or edit `site_geom`) of your own layer.
 | `BS` | bootstrap block size in pixels (100 = 1 km, 200 = 2 km), `compare_big.py` | 100 |
 | `REPS` | bootstrap replicates (`compare_big.py` default 1000, `robustness.py` default 300; the paper used 1000) | see left |
 
@@ -30,7 +32,7 @@ Run from the `scripts/` directory (scripts use `from common import *`). bash: `B
 
 ## Run order
 1. `python make_controls.py` - reference polygons (forest estate outside KHDPK and PS, within 15 km) -> `data/controls.gpkg`.
-2. `python download_big.py` - shared 2018 and 2025 composites on one 10 m grid -> `data/big_pre.tif`, `data/big_post.tif` (9 bands: 7 Sentinel-2, 2 Sentinel-1). It imports `download_epochs.py`.
+2. `python download_big.py` - full 2018 and 2025 composites (the two dates of the baseline contrast) on one 10 m grid -> `data/big_pre.tif`, `data/big_post.tif` (9 bands: 7 Sentinel-2, 2 Sentinel-1). It imports `download_epochs.py`.
 3. `python download_annual.py 2017 2019 2020 2021 2022 2023 2024` -> `data/annual_<year>.tif`. If strips fail after retries, `repair_annual.py` recomputes them; its `BAD` dictionary is hard-coded to the strips that failed in the original run and must be edited to match your own log.
 4. `BS=100 REPS=1000 python compare_big.py` -> `out/comparison_big.json`; then `BS=200 REPS=1000 python compare_big.py` -> `out/comparison_big_bs200.json` (2 km sensitivity).
 5. `python placebo.py` -> `out/placebo.json`, `out/placebo.txt`.
@@ -58,4 +60,4 @@ Run from the `scripts/` directory (scripts use `from common import *`). bash: `B
 `comparison_big*.json`, `compare_big_1000.txt`, `placebo.json/.txt`, `tree_share.txt`, `robustness.json/.txt`, `results_tables.json/.txt`, `annual_series.json/.txt`, `weather_by_year.csv`, `weather_corr.txt`, `weather_regression.txt`. `comparison_big_reps100.json` is a 100-replicate test run, not used in the paper.
 
 ## Caveat
-Two epochs plus an annual series, three sites, no field validation: the results are an adjusted association, not a causal effect.
+An annual series of nine dry seasons and a two-date baseline contrast, three sites, no field validation: the results are an adjusted association, not a causal effect.

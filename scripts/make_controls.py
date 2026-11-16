@@ -3,8 +3,8 @@ import geopandas as gpd, pandas as pd, os
 from shapely.ops import unary_union
 from common import *
 R=15000
-ps=gpd.read_parquet(PS_PARQUET).to_crs(CRS)
-kws=gpd.read_parquet(KWS_PARQUET).to_crs(CRS); kh=gpd.read_parquet(KHDPK_PARQUET).to_crs(CRS)
+ps=read_vector(PS_LAYER).to_crs(CRS)
+kws=read_vector(KWS_LAYER).to_crs(CRS); kh=read_vector(KHDPK_LAYER).to_crs(CRS)
 forest=kws[kws.F_KWS.isin(["HP","HL","HPT"])]
 excl=unary_union(list(ps.buffer(300).geometry)+list(kh.buffer(0).geometry))
 out=[]

@@ -18,7 +18,7 @@ sites = {s: site_geom(s) for s in SITES}
 
 # ---------- Figure 1: study area ----------
 X0, X1, Yb, Yt = 657500, 700410, 9065690, 9090210
-kec = gpd.read_parquet(KEC_PARQUET).to_crs(CRS)
+kec = read_vector(KEC_LAYER).to_crs(CRS)
 kec = kec[kec.intersects(box(X0 - 3000, Yb - 3000, X1 + 3000, Yt + 3000))]
 fig, ax = plt.subplots(figsize=(7.2, 4.6))
 kec.plot(ax=ax, fc="#f3f1ec", ec="#8c8c8c", lw=0.5)
@@ -48,7 +48,7 @@ ax.text(X0 + 15000, Yb + 900, "Indian Ocean", fontsize=8, style="italic", color=
 ax.legend(handles=[Patch(fc="#d9480f", alpha=0.8, ec="k", label="Permit areas (IPHPS to HKm)"),
                    Patch(fc="#4c78a8", alpha=0.45, label="Reference forest (HP/HL/HPT outside KHDPK and PS)"),
                    Patch(fc="#f3f1ec", ec="#8c8c8c", label="Kecamatan")], loc="upper left", fontsize=6.5, frameon=True)
-java = gpd.read_parquet(ADMIN_PARQUET)
+java = read_vector(ADMIN_LAYER)
 java = java[~java.WADMPR.str.contains("Bali", case=False, na=False)]
 jl = java.dissolve(by="WADMPR")
 ins = ax.inset_axes([0.66, 0.74, 0.33, 0.21])
