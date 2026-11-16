@@ -1,0 +1,12 @@
+{
+  "title": "Baseline Year and Rainfall Affect Apparent Greening in Community-Managed Social Forestry Areas: A Sentinel Case Study from Southern Malang, Indonesia",
+  "upload_type": "software",
+  "description": "Analysis code and derived result tables for a Sentinel-1/Sentinel-2 matched comparison of three social forestry permit areas in southern Malang, Indonesia, against a regional forest-estate benchmark (annual series 2017-2025, NASA POWER rainfall). Permit boundary polygons are provided by Balai Perhutanan Sosial Yogyakarta and are not included.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "creators": [
+    {"name": "Mountara, Arieh", "affiliation": "Balai Perhutanan Sosial Yogyakarta, Ministry of Forestry, Republic of Indonesia"}
+  ],
+  "keywords": ["social forestry", "Sentinel-2", "Sentinel-1", "NDVI", "matched comparison", "Indonesia", "Malang", "remote sensing"],
+  "access_right": "open"
+}

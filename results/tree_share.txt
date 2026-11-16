@@ -1,0 +1,8 @@
+2018 items used 2
+site harapan_pertiwi (24.8, 1222) | reference (62.2, 2930)
+site bhakti_alam_lestari (28.7, 892) | reference (59.5, 2368)
+site bangkit_sejahtera (7.9, 3102) | reference (53.2, 6133)
+2023 items used 2
+site harapan_pertiwi (42.9, 1222) | reference (67.4, 2930)
+site bhakti_alam_lestari (55.8, 892) | reference (64.3, 2368)
+site bangkit_sejahtera (25.6, 3102) | reference (62.1, 6133)

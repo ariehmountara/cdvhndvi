@@ -1,0 +1,15 @@
+# Python 3.13
+rasterio==1.5.0
+geopandas==1.1.3
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+matplotlib==3.10.9
+shapely==2.1.2
+pyarrow==25.0.1
+requests==2.32.5
+pystac-client==0.9.1
+planetary-computer==1.0.0
+# imported at module level by obia_change.py (only its idx() function is used by the final analysis)
+scikit-image==0.26.0
+scikit-learn==1.8.0

@@ -1,0 +1,13 @@
+Fit over 2017-2024 (n=8; the 2018 offset is zero by construction), predict 2025, 95% prediction interval
+harapan_pertiwi       NDVI ant30_S2  R2=0.30 slope_p=0.16 expected2025=+0.021 +/-0.064 observed2025=+0.049 residual=+0.028 explained=43% x2025=94 trainmax=89
+harapan_pertiwi       NDVI dry_rain  R2=0.55 slope_p=0.04 expected2025=+0.006 +/-0.047 observed2025=+0.049 residual=+0.042 explained=13% x2025=375 trainmax=675
+harapan_pertiwi       VH   ant30_S2  R2=0.61 slope_p=0.02 expected2025=+0.566 +/-0.406 observed2025=+0.389 residual=-0.177 explained=146% x2025=94 trainmax=89
+harapan_pertiwi       VH   dry_rain  R2=0.51 slope_p=0.05 expected2025=+0.372 +/-0.407 observed2025=+0.389 residual=+0.016 explained=96% x2025=375 trainmax=675
+bhakti_alam_lestari   NDVI ant30_S2  R2=0.33 slope_p=0.13 expected2025=+0.016 +/-0.053 observed2025=+0.036 residual=+0.020 explained=44% x2025=94 trainmax=89
+bhakti_alam_lestari   NDVI dry_rain  R2=0.55 slope_p=0.03 expected2025=+0.003 +/-0.039 observed2025=+0.036 residual=+0.033 explained=8% x2025=375 trainmax=675
+bhakti_alam_lestari   VH   ant30_S2  R2=0.52 slope_p=0.04 expected2025=+0.491 +/-0.429 observed2025=+0.324 residual=-0.167 explained=151% x2025=94 trainmax=89
+bhakti_alam_lestari   VH   dry_rain  R2=0.39 slope_p=0.10 expected2025=+0.320 +/-0.435 observed2025=+0.324 residual=+0.005 explained=99% x2025=375 trainmax=675
+bangkit_sejahtera     NDVI ant30_S2  R2=0.23 slope_p=0.23 expected2025=+0.016 +/-0.074 observed2025=+0.034 residual=+0.017 explained=49% x2025=94 trainmax=89
+bangkit_sejahtera     NDVI dry_rain  R2=0.35 slope_p=0.12 expected2025=+0.002 +/-0.061 observed2025=+0.034 residual=+0.032 explained=6% x2025=375 trainmax=675
+bangkit_sejahtera     VH   ant30_S2  R2=0.78 slope_p=0.00 expected2025=+0.642 +/-0.398 observed2025=+0.341 residual=-0.302 explained=189% x2025=94 trainmax=89
+bangkit_sejahtera     VH   dry_rain  R2=0.56 slope_p=0.03 expected2025=+0.355 +/-0.501 observed2025=+0.341 residual=-0.014 explained=104% x2025=375 trainmax=675

@@ -1,0 +1,19 @@
+blocks (valid-pixel blocks):{"harapan_pertiwi_100": 23, "ref_harapan_pertiwi_100": 94, "bhakti_alam_lestari_100": 26, "ref_bhakti_alam_lestari_100": 89, "bangkit_sejahtera_100": 59, "ref_bangkit_sejahtera_100": 152, "ref_pooled_100": 170, "harapan_pertiwi_200": 9, "ref_harapan_pertiwi_200": 37, "bhakti_alam_lestari_200": 10, "ref_bhakti_alam_lestari_200": 35, "bangkit_sejahtera_200": 20, "ref_bangkit_sejahtera_200": 56, "ref_pooled_200": 63}
+buf  0 harapan_pertiwi     harapan_pertiwi      dNDVI +0.032 [+0.0158,+0.0453]  dVH +0.51 [+0.31,+0.70]  n=121903
+buf  0 harapan_pertiwi     pooled               dNDVI +0.049 [+0.0386,+0.0582]  dVH +0.39 [+0.25,+0.53]  n=121903
+buf  0 bhakti_alam_lestari bhakti_alam_lestari  dNDVI +0.015 [+0.0008,+0.0312]  dVH +0.39 [+0.17,+0.57]  n=88777
+buf  0 bhakti_alam_lestari pooled               dNDVI +0.036 [+0.0206,+0.0472]  dVH +0.32 [+0.13,+0.51]  n=88777
+buf  0 bangkit_sejahtera   bangkit_sejahtera    dNDVI +0.036 [+0.0207,+0.0490]  dVH +0.32 [+0.20,+0.45]  n=309751
+buf  0 bangkit_sejahtera   pooled               dNDVI +0.034 [+0.0190,+0.0453]  dVH +0.34 [+0.24,+0.45]  n=309751
+buf100 harapan_pertiwi     harapan_pertiwi      dNDVI +0.029 [+0.0086,+0.0440]  dVH +0.47 [+0.31,+0.62]  n=101593
+buf100 harapan_pertiwi     pooled               dNDVI +0.054 [+0.0416,+0.0630]  dVH +0.41 [+0.25,+0.56]  n=101593
+buf100 bhakti_alam_lestari bhakti_alam_lestari  dNDVI +0.014 [-0.0048,+0.0335]  dVH +0.35 [+0.15,+0.57]  n=52924
+buf100 bhakti_alam_lestari pooled               dNDVI +0.039 [+0.0255,+0.0546]  dVH +0.33 [+0.16,+0.55]  n=52924
+buf100 bangkit_sejahtera   bangkit_sejahtera    dNDVI +0.040 [+0.0230,+0.0567]  dVH +0.32 [+0.19,+0.44]  n=232643
+buf100 bangkit_sejahtera   pooled               dNDVI +0.037 [+0.0180,+0.0530]  dVH +0.33 [+0.21,+0.44]  n=232643
+buf200 harapan_pertiwi     harapan_pertiwi      dNDVI +0.032 [+0.0112,+0.0504]  dVH +0.48 [+0.29,+0.69]  n=83202
+buf200 harapan_pertiwi     pooled               dNDVI +0.059 [+0.0462,+0.0702]  dVH +0.46 [+0.29,+0.61]  n=83202
+buf200 bhakti_alam_lestari bhakti_alam_lestari  dNDVI +0.013 [-0.0133,+0.0369]  dVH +0.35 [+0.12,+0.65]  n=25825
+buf200 bhakti_alam_lestari pooled               dNDVI +0.040 [+0.0248,+0.0614]  dVH +0.36 [+0.18,+0.66]  n=25825
+buf200 bangkit_sejahtera   bangkit_sejahtera    dNDVI +0.045 [+0.0274,+0.0616]  dVH +0.37 [+0.23,+0.54]  n=177595
+buf200 bangkit_sejahtera   pooled               dNDVI +0.044 [+0.0255,+0.0575]  dVH +0.38 [+0.20,+0.52]  n=177595

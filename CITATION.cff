@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Baseline Year and Rainfall Affect Apparent Greening in Community-Managed Social Forestry Areas: A Sentinel Case Study from Southern Malang, Indonesia"
+version: 1.0.0
+date-released: 2026-11-10
+license: MIT
+authors:
+  - family-names: Mountara
+    given-names: Arieh
+    affiliation: "Balai Perhutanan Sosial Yogyakarta, Ministry of Forestry, Republic of Indonesia"
+# doi: add the Zenodo version DOI here after the first release
