@@ -5,7 +5,10 @@ from matplotlib.backends.backend_pdf import PdfPages
 from common import *
 P=ROOT/"paper"
 caps=[("figS1_timeseries_ndvi.png","Fig. S1 Dry-season (June-October) NDVI composites, 2017-2025, for the three permit areas (rows). Red lines are the permit boundaries. 2018 and 2025 are full composites; 2017 and 2019-2024 are reduced annual composites (ten least-cloudy Sentinel-2 L2A scenes each)."),
-      ("figS2_timeseries_vh.png","Fig. S2 Dry-season Sentinel-1 VH backscatter (dB) composites, 2017-2025 (ascending relative orbit 54, median of all scenes), for the three permit areas. Red lines are the permit boundaries.")]
+      ("figS2_timeseries_vh.png","Fig. S2 Dry-season Sentinel-1 VH backscatter (dB) composites, 2017-2025 (ascending relative orbit 54, median of all scenes), for the three permit areas. Red lines are the permit boundaries."),
+      ("figS3_scene_conditions.png","Fig. S3 Cloud, shadow and no-data fraction over the study area (permit areas and reference polygons) of every candidate Sentinel-2 L2A scene (tile 49LFL, tile cloud cover below 40%) in the 2018 and 2025 dry seasons, from the scene classification layer at 100 m. Squares: scenes used in the paper (selection A, by tile cloud cover); circles: scenes with the smallest study-area fraction (selection B). The shaded band marks 15%."),
+      ("figS4_valid_counts_2018.png","Fig. S4a 2018: valid observations per pixel (Sentinel-2 for selections A and B, Sentinel-1 VH) and NDVI composites under both selections. Red lines are the permit boundaries."),
+      ("figS4_valid_counts_2025.png","Fig. S4b 2025: as Fig. S4a. Under selection A the southern part of the tile, including the permit areas, has a median of 3 valid Sentinel-2 observations per pixel.")]
 with PdfPages(P/"Online_Resource_1.pdf") as pdf:
     for f,c in caps:
         fig=plt.figure(figsize=(8.27,11.69)); ax=fig.add_axes([0.05,0.45,0.9,0.45]); ax.imshow(mi.imread(P/f)); ax.axis("off")
